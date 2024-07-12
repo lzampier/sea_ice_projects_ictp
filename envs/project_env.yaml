@@ -3,6 +3,8 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - aiohttp=3.9.5=py312he37b823_0
+  - aiosignal=1.3.1=pyhd8ed1ab_0
   - anyio=4.4.0=pyhd8ed1ab_0
   - appnope=0.1.4=pyhd8ed1ab_0
   - archspec=0.2.3=pyhd8ed1ab_0
@@ -34,6 +36,7 @@ dependencies:
   - babel=2.14.0=pyhd8ed1ab_0
   - beautifulsoup4=4.12.3=pyha770c72_0
   - bleach=6.1.0=pyhd8ed1ab_0
+  - blinker=1.8.2=pyhd8ed1ab_0
   - blosc=1.21.6=h5499902_0
   - bokeh=3.4.2=pyhd8ed1ab_0
   - boltons=24.0.0=pyhd8ed1ab_0
@@ -46,6 +49,7 @@ dependencies:
   - ca-certificates=2024.7.4=hf0a4a13_0
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
+  - cachetools=5.3.3=pyhd8ed1ab_0
   - cartopy=0.23.0=py312h8ae5369_1
   - certifi=2024.7.4=pyhd8ed1ab_0
   - cffi=1.16.0=py312h8e38eb3_0
@@ -54,14 +58,17 @@ dependencies:
   - charset-normalizer=3.3.2=pyhd8ed1ab_0
   - click=8.1.7=unix_pyh707e725_0
   - cloudpickle=3.0.0=pyhd8ed1ab_0
+  - cmocean=4.0.3=pyhd8ed1ab_0
   - colorama=0.4.6=pyhd8ed1ab_0
   - colorcet=3.1.0=pyhd8ed1ab_0
+  - colorspacious=1.1.2=pyh24bf2e0_0
   - comm=0.2.2=pyhd8ed1ab_0
   - conda=24.5.0=py312h81bd7bf_0
   - conda-libmamba-solver=24.1.0=pyhd8ed1ab_0
   - conda-package-handling=2.3.0=pyh7900ff3_0
   - conda-package-streaming=0.10.0=pyhd8ed1ab_0
   - contourpy=1.2.1=py312h0fef576_0
+  - cryptography=42.0.8=py312had01cb0_0
   - cycler=0.12.1=pyhd8ed1ab_0
   - cytoolz=0.12.3=py312he37b823_0
   - dask=2024.7.0=pyhd8ed1ab_0
@@ -83,10 +90,21 @@ dependencies:
   - fqdn=1.5.1=pyhd8ed1ab_0
   - freetype=2.12.1=hadb7bae_2
   - frozendict=2.4.4=py312h7e5086c_0
+  - frozenlist=1.4.1=py312he37b823_0
   - fsspec=2024.6.1=pyhff2d567_0
+  - gcsfs=2024.6.1=pyhd8ed1ab_0
   - geos=3.12.2=h00cdb27_0
   - gflags=2.2.2=hc88da5d_1004
   - glog=0.7.1=heb240a5_0
+  - google-api-core=2.19.1=pyhd8ed1ab_0
+  - google-auth=2.32.0=pyhff2d567_0
+  - google-auth-oauthlib=1.2.1=pyhd8ed1ab_0
+  - google-cloud-core=2.4.1=pyhd8ed1ab_0
+  - google-cloud-storage=2.17.0=pyhff2d567_0
+  - google-crc32c=1.1.2=py312h80a10bc_5
+  - google-resumable-media=2.7.0=pyhd8ed1ab_0
+  - googleapis-common-protos=1.63.2=pyhd8ed1ab_0
+  - grpcio=1.62.2=py312h17030e7_0
   - h11=0.14.0=pyhd8ed1ab_0
   - h2=4.1.0=pyhd8ed1ab_0
   - hdf4=4.2.15=h2ee6834_7
@@ -195,6 +213,7 @@ dependencies:
   - menuinst=2.1.1=py312h81bd7bf_0
   - mistune=3.0.2=pyhd8ed1ab_0
   - msgpack-python=1.0.8=py312h157fec4_0
+  - multidict=6.0.5=py312h670c8ac_0
   - munkres=1.1.4=pyh9f0ad1d_0
   - nbclient=0.10.0=pyhd8ed1ab_0
   - nbconvert-core=7.16.4=pyhd8ed1ab_1
@@ -205,6 +224,7 @@ dependencies:
   - notebook-shim=0.2.4=pyhd8ed1ab_0
   - numcodecs=0.12.1=py312h5c2e7bc_1
   - numpy=2.0.0=py312hb544834_0
+  - oauthlib=3.2.2=pyhd8ed1ab_0
   - openjpeg=2.5.2=h9f1df11_0
   - openssl=3.3.1=hfb2fe0b_1
   - orc=2.0.1=h47ade37_1
@@ -227,6 +247,8 @@ dependencies:
   - proj=9.4.1=hfb94cee_0
   - prometheus_client=0.20.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.47=pyha770c72_0
+  - proto-plus=1.23.0=pyhd8ed1ab_0
+  - protobuf=4.25.3=py312h1a610f3_0
   - psutil=6.0.0=py312h7e5086c_0
   - pthread-stubs=0.4=h27ca646_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
@@ -234,12 +256,16 @@ dependencies:
   - pyarrow=16.1.0=py312ha814d7c_4
   - pyarrow-core=16.1.0=py312h21f1c3e_4_cpu
   - pyarrow-hotfix=0.6=pyhd8ed1ab_0
+  - pyasn1=0.6.0=pyhd8ed1ab_0
+  - pyasn1-modules=0.4.0=pyhd8ed1ab_0
   - pybind11-abi=4=hd8ed1ab_3
   - pycosat=0.6.6=py312h02f2b3b_0
   - pycparser=2.22=pyhd8ed1ab_0
   - pygments=2.18.0=pyhd8ed1ab_0
+  - pyjwt=2.8.0=pyhd8ed1ab_1
   - pyobjc-core=10.3.1=py312hbb55c70_0
   - pyobjc-framework-cocoa=10.3.1=py312hbb55c70_0
+  - pyopenssl=24.0.0=pyhd8ed1ab_0
   - pyparsing=3.1.2=pyhd8ed1ab_0
   - pyproj=3.6.1=py312h64656f7_7
   - pyshp=2.3.1=pyhd8ed1ab_0
@@ -252,6 +278,7 @@ dependencies:
   - python-tzdata=2024.1=pyhd8ed1ab_0
   - python_abi=3.12=4_cp312
   - pytz=2024.1=pyhd8ed1ab_0
+  - pyu2f=0.1.5=pyhd8ed1ab_0
   - pyviz_comms=3.0.2=pyhd8ed1ab_1
   - pyyaml=6.0.1=py312h02f2b3b_1
   - pyzmq=26.0.3=py312hfa13136_0
@@ -262,9 +289,11 @@ dependencies:
   - reproc=14.2.4.post0=h93a5062_1
   - reproc-cpp=14.2.4.post0=h965bd2d_1
   - requests=2.32.3=pyhd8ed1ab_0
+  - requests-oauthlib=2.0.0=pyhd8ed1ab_0
   - rfc3339-validator=0.1.4=pyhd8ed1ab_0
   - rfc3986-validator=0.1.1=pyh9f0ad1d_0
   - rpds-py=0.19.0=py312h552d48e_0
+  - rsa=4.9=pyhd8ed1ab_0
   - ruamel.yaml=0.18.6=py312he37b823_0
   - ruamel.yaml.clib=0.2.8=py312he37b823_0
   - scipy=1.14.0=py312h14ffa8f_1
@@ -311,6 +340,7 @@ dependencies:
   - xz=5.2.6=h57fd34a_0
   - yaml=0.2.5=h3422bc3_2
   - yaml-cpp=0.8.0=h13dd4ca_0
+  - yarl=1.9.4=py312he37b823_0
   - zarr=2.18.2=pyhd8ed1ab_0
   - zeromq=4.3.5=hcc0f68c_4
   - zict=3.0.0=pyhd8ed1ab_0
