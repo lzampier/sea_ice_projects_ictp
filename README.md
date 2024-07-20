@@ -28,12 +28,15 @@ chmod 744 ./Miniconda3-latest-Linux-x86_64.sh
 
 source ./.bashrc
 
-### Clone code from Github specific to our project, and install 
-the postprocessing conda environment with all the required packages
+### Clone code from Github specific to our project
 
 git clone https://github.com/lzampier/sea_ice_projects_ictp.git
 
+### Edit the last line of sea_ice_projects_ictp/envs/project_env.yaml changing Lorenzo's user name to yours??? Then install the postprocessing conda environment with all the required packages. This will take 10 min or so. This isn't working for CC at the moment so will have to figure out why
+
 conda env create -f sea_ice_projects_ictp/envs/project_env.yaml
+
+python -m ipykernel install --user --name project_env --display-name "Python seaice"            
 
 ## Start Jupyter, substitute your favorite 4 digit number for the port
 
