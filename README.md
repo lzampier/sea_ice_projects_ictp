@@ -18,21 +18,22 @@ ssh user@argo-login2.ictp.it
 
 source ~/.bashrc
 
-### Clone code from Github specific to our project, and install miniconda
+### Install miniconda
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+chmod 744 ./Miniconda3-latest-Linux-x86_64.sh
+
+./Miniconda3-latest-Linux-x86_64.sh
+
+source ./.bashrc
+
+### Clone code from Github specific to our project, and install 
+the postprocessing conda environment with all the required packages
 
 git clone https://github.com/lzampier/sea_ice_projects_ictp.git
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.5.0-0-MacOSX-x86_64.sh
-
-./Miniconda3-py310_24.5.0-0-Linux-x86_64.sh
-
-./miniconda3/bin/conda init
-
-### Install the postprocessing conda environment with all the required packages
-
-cd sea_ice_projects_ictp
-
-conda env create -f envs/project_env.yaml
+conda env create -f sea_ice_projects_ictp/envs/project_env.yaml
 
 ## Start Jupyter, substitute your favorite 4 digit number for the port
 
