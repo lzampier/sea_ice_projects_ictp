@@ -26,21 +26,10 @@ etc...
 If conda is not installed, and you are on a cluster or HPC system try `module load anaconda` or `module avail` to see if there is a conda installation available for you. If conda is still not installed, you can easily install miniconda on your platform of choice (Windows, Linux, Mac) by following [**this guide**](https://docs.anaconda.com/miniconda/). You might need to restart your shell after installing `conda`. 
 
 
-## If instead you want to log onto the ictp Linux cluster, do the following replacing user with your login name
-
-ssh user@argo-login1.ictp.it
-
-or 
-
-ssh user@argo-login2.ictp.it
+## If instead you want to use the computers in the ictp info lab use the username and password that you were provided
 
 ## Run once to get stated
 
-### Run the script to modify your .bashrc file to access software for this course
-
-/home/esp-shared-a/Distribution/Workshops/PolarClimate_2024/argo_run_me_first
-
-source ~/.bashrc
 
 ### Install miniconda
 
@@ -50,7 +39,11 @@ chmod 744 ./Miniconda3-latest-Linux-x86_64.sh
 
 ./Miniconda3-latest-Linux-x86_64.sh
 
+./miniconda3/bin/conda init
+
 source ./.bashrc
+
+
 
 
 `mamba` is a reimplementation of the conda package manager in C++. To make it simple, it runs faster than `conda` and I recommend installing and using it by running `conda install -c conda-forge mamba`.
@@ -61,7 +54,11 @@ Run the following commands, that should install everything you need for starting
 
 ```
 
+conda create --name seaice
+
 conda activate my-env
+
+conda install mamba
 
 mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib zarr dask gcsfs cmocean ipykernel scipy jupyterlab
 ```
@@ -76,18 +73,7 @@ python -m ipykernel install --user --name my-env --display-name "Python seaice"
 Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
 
 
-## Start Jupyter, substitute your favorite 4 digit number for the port
+## Start Jupyter
 
-jupyter notebook --no-browser --port=9994
+jupyter &
 
-### now on youor laptop, substitue your port number and user name. Be sure login1 or login2 matches the one you used to get on to  ictpwhere you ran jupyter
-
-ssh -N -f -L localhost:9994:localhost:9994 user@argo-login1.ictp.it
- 
-
-
-### To clone code from Github specific to our project
-
-git clone https://github.com/lzampier/sea_ice_projects_ictp.git
-
-When you open a python notebook or start a new one, change the kernel to Python seaice
