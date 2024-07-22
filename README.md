@@ -73,7 +73,21 @@ python -m ipykernel install --user --name my-env --display-name "Python seaice"
 Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
 
 
+<<<<<<< HEAD
 ## Start Jupyter
+=======
+## Start Jupyter, substitute your favorite 4 digit number for the port
+
+jupyter notebook --no-browser --port=9994
+
+### now on your laptop, substitue your port number and user name. Be sure login1 or login2 matches the one you used to get on to  ictpwhere you ran jupyter
+
+ssh -N -f -L localhost:9994:localhost:9994 user@argo-login1.ictp.it
+ 
+
+
+### To clone code from Github specific to our project
+>>>>>>> a696fe7101a1ae66a8a34f17044dc2bc7c3c39b0
 
 jupyter &
 
