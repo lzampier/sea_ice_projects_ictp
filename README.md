@@ -80,7 +80,7 @@ Now you should be able to run `jupyter lab` from a shell with your active enviro
 
 jupyter notebook --no-browser --port=9994
 
-### now on youor laptop, substitue your port number and user name. Be sure login1 or login2 matches the one you used to get on to  ictpwhere you ran jupyter
+### now on your laptop, substitue your port number and user name. Be sure login1 or login2 matches the one you used to get on to  ictpwhere you ran jupyter
 
 ssh -N -f -L localhost:9994:localhost:9994 user@argo-login1.ictp.it
  
