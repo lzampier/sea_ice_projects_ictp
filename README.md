@@ -26,7 +26,7 @@ etc...
 If conda is not installed, and you are on a cluster or HPC system try `module load anaconda` or `module avail` to see if there is a conda installation available for you. If conda is still not installed, you can easily install miniconda on your platform of choice (Windows, Linux, Mac) by following [**this guide**](https://docs.anaconda.com/miniconda/). You might need to restart your shell after installing `conda`. 
 
 
-## Log onto ictp Linux cluster, replace user with your login name
+## If instead you want to log onto the ictp Linux cluster, do the following replacing user with your login name
 
 ssh user@argo-login1.ictp.it
 
@@ -66,10 +66,15 @@ conda activate <my-env>
 mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib zarr dask gcsfs cmocean ipykernel scipy jupyterlab
 ```
 
-The whole process is typically fast but can take up to a few minutes. The evolution of the installation can be monitored by a progress bar. Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
+The whole process is typically fast but can take up to a few minutes. The evolution of the installation can be monitored by a progress bar. Next make the environment available to Jupyter with the following:
 
-
+```
 python -m ipykernel install --user --name <my-env> --display-name "Python seaice"     
+```
+
+
+Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
+
 
 ## Start Jupyter, substitute your favorite 4 digit number for the port
 
