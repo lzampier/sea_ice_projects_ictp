@@ -55,13 +55,13 @@ source ./.bashrc
 
 `mamba` is a reimplementation of the conda package manager in C++. To make it simple, it runs faster than `conda` and I recommend installing and using it by running `conda install -c conda-forge mamba`.
 
-## Create a new environment, we'll call it <my-env>, and install the Python packages you need
+## Create a new environment, we'll call it my-env but you can use whatever you want, and install the Python packages you need
 
 Run the following commands, that should install everything you need for starting with your project.
 
 ```
 
-conda activate <my-env>
+conda activate my-env
 
 mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib zarr dask gcsfs cmocean ipykernel scipy jupyterlab
 ```
@@ -69,7 +69,7 @@ mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib za
 The whole process is typically fast but can take up to a few minutes. The evolution of the installation can be monitored by a progress bar. Next make the environment available to Jupyter with the following:
 
 ```
-python -m ipykernel install --user --name <my-env> --display-name "Python seaice"     
+python -m ipykernel install --user --name my-env --display-name "Python seaice"     
 ```
 
 
