@@ -60,7 +60,6 @@ conda install -c conda-forge mamba
 Run the following commands, that should install everything you need for starting with your project.
 
 ```
-
 conda create --name seaice
 
 conda activate seaice
@@ -68,17 +67,17 @@ conda activate seaice
 mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib zarr dask gcsfs cmocean ipykernel scipy jupyterlab
 ```
 
-The whole process is typically fast but can take up to a few minutes. The evolution of the installation can be monitored by a progress bar. Next make the environment available to Jupyter with the following:
-
-```
-python -m ipykernel install --user --name seaice --display-name "Python seaice"     
-```
-
+This can take up to about 20 minutes. The evolution of the installation can be monitored by a progress bar.
 
 Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
 
 
-## Start Jupyter
+## next time you start the computer you may need to 
 
-jupyter notbook &
 
+```
+conda activate seaice
+
+jupyter lab &
+
+```
