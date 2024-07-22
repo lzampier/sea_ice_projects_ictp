@@ -80,5 +80,5 @@ Now you should be able to run `jupyter lab` from a shell with your active enviro
 
 ## Start Jupyter
 
-jupyter &
+jupyter notbook &
 
