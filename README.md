@@ -67,7 +67,15 @@ conda activate seaice
 mamba install -c conda-forge xarray dask netCDF4 bottleneck matplotlib cfgrib zarr dask gcsfs cmocean ipykernel scipy jupyterlab
 ```
 
+
 This can take up to about 20 minutes. The evolution of the installation can be monitored by a progress bar.
+
+Install the environment in your account with
+
+```
+python -m ipykernel install --user --name seaice --display-name "Python seaice"
+```
+
 
 Now you should be able to run `jupyter lab` from a shell with your active environment and find all the Python packages you installed already available there.
 
